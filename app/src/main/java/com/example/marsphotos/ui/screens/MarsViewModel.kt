@@ -43,7 +43,7 @@ class MarsViewModel(private val marsPhotosRepository: MarsPhotosRepository) : Vi
         getMarsPhotos()
     }
 
-    private fun getMarsPhotos() {
+    public fun getMarsPhotos() {
         viewModelScope.launch {
             marsUiState = MarsUiState.Loading
             marsUiState = try {
